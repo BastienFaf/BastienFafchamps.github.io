@@ -1,0 +1,15 @@
+{
+  "name": "PortfolioV2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "animations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "smooth-scrollbar": "^8.6.0"
+  }
+}
