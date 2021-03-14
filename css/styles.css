@@ -65,7 +65,8 @@ nav ul li:hover {
 
 h1 {
     color: var(--text-color);
-    font-size: xx-large;
+    font-size: 4rem;
+    letter-spacing: -2px;
 }
 
 h2 {
@@ -83,7 +84,7 @@ span {
     font-size: 0.8rem;
 }
 
-p {
+p, .text {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: small;
     margin: 0.3rem 0;
@@ -124,7 +125,7 @@ main {
 header, .side-panel, footer {
     background: white;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
 
     position: relative;
     right: 2rem;
@@ -133,15 +134,35 @@ header, .side-panel, footer {
 }
 
 header {
-    z-index: 10;
+    width: 95%;
+    padding: 2rem 0 2rem 2rem;
+    z-index: 5;
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.37);
     transform: translatey(0px);
     transition: 1s ease-in-out;
 }
 
+header div {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+header div h1 {
+    position: relative;
+    z-index: 100;
+}
+
 header:hover {
     box-shadow: 5px 7.5px 10px rgba(255, 255, 255, 0.37);
 	transform: translatey(-5px);
+}
+
+#header_name {
+    position: absolute;
+    z-index: -5;
+    color: white;
+    top: 53px;
+    left: 15.8rem;
 }
 
 footer {
@@ -254,10 +275,10 @@ footer {
 
 #profile_picture {
     border-radius: 1rem;
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     left: 23rem;
-    top: 5rem;
+    top: 13rem;
     box-shadow: 5px 5px 10px rgba(102, 102, 102, 0.5);
 	transform: translatey(0px);
 	transition: 1s ease-in-out;
