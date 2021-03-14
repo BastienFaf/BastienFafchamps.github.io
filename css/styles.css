@@ -90,6 +90,10 @@ p, .text {
     margin: 0.3rem 0;
 }
 
+a {
+    font-weight: bold;
+}
+
 div.space-small {
     height: 2rem;
 }
