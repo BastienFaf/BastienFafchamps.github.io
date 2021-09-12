@@ -1,0 +1,257 @@
+:root {
+    --bg: #141414;
+    --bg-b: #000000;
+    --text: #ffffff;
+    --text-subtitle: #dadada;
+    --text-light: #424242;
+    --text-highlight: #ffab2d;  
+    --text-highlight-b: #db6618;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--text);
+}
+
+#portfolio {
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+}
+
+#portfolio.smaller {
+    margin: auto;
+    margin-top: 32vh;
+
+    max-height: 30rem;
+    width: 50rem;
+
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+section.page-section {
+    position: relative;
+    height: 100vh;
+    border-bottom: 1px var(--text-light) solid;
+}
+
+h1 {
+    color: var(--text);
+}
+h1 span {
+    font-size: 12rem;
+}
+
+h2 {
+    font-size: 8rem;
+    font-weight: bolder;
+}
+h2.sub-title {
+    color: var(--text-highlight);
+    background: -webkit-linear-gradient(var(--text-highlight), var(--text-highlight-b));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+p {
+    font-size: medium;
+    font-weight: lighter;
+}
+p.sub-title {
+    color: var(--text-subtitle);
+}
+p.sub-title b {
+    color: var(--text);
+}
+.title {
+    padding-top: 15rem;
+}
+
+nav {
+    position: fixed;
+    background-color: var(--bg);
+    padding: 0.5rem;
+    top: 0;
+    box-shadow: 0px 5px 15px var(--bg);
+    z-index: 100;
+    width: 100%;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+nav ul li {
+    background: none;
+    padding: 0.5rem;
+    list-style: none;
+    transition: 0.5s;
+    margin: .2rem;
+    z-index: 100;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-subtitle);
+    font-weight: lighter;
+    transition: color .2s ease-in-out;
+}
+nav ul li a:hover {
+    color: var(--text);
+}
+
+#home {
+    background: var(--bg);
+    position: inherit;
+    z-index: 120;
+}
+
+svg {
+    fill: var(--text);
+    transition: fill 0.2s ease-in-out;
+}
+.svg-button {
+    width: max-content;
+}
+
+.svg-button:hover svg {
+    fill: var(--text-highlight);
+}
+.next-page-button {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 10rem;
+    animation: MoveUpDown 3s ease-in-out infinite alternate;
+}
+@keyframes MoveUpDown {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
+
+.skills-tables-container {
+    position: relative;
+}
+.vertical-separator {
+    position: absolute;
+    left: 45%;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    background: var(--text-light);
+    border: none;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: var(--text);
+    color: var(--text);
+    margin-right: 2rem;
+    text-decoration: none;
+    font-size: 2.25rem;
+    transition: fill 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+.icon-button:hover, .icon-button:hover svg {
+    fill: var(--text-highlight);
+    color: var(--text-highlight);
+}
+
+.pt-5 {
+    padding-top: 5rem;  
+}
+
+.columns p {
+    margin-bottom: 1rem;
+}
+
+.title-animation {
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
+.title-animation .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+
+.title-animation .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--text);
+    transform-origin: 0 50%;
+}
+
+.title-animation .line1 { 
+    top: 0; 
+    left: 0;
+}
+
+.title-animation .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.fade-in {
+    position: relative;
+    opacity: 0;
+    right: 30px;
+    transition: 1s ease-in-out;
+}
+.fade-in.appear {
+    opacity: 1;
+    right: 0px;
+}
+
+
+.skills-buttons {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+.skill-button {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--text-light);
+    transition: 0.2s ease-in-out;
+}
+.skill-button:hover {
+    color: var(--text);
+}
+.skill-button.selected {
+    color: var(--text-highlight);
+    border-bottom: 1px solid var(--text-highlight);
+}
+
+.skills-table {
+    display: none;
+}
+.skills-table.selected {
+    display: block;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: 1000;
+    pointer-events: none;
+}
