@@ -49,56 +49,58 @@ function getTranslate() {
 }
 
 animate = () => {
-    anime.timeline({ loopComplete: () => {
-        onLoopComplete();
-    }})
-    .add({
-        targets: '.title-animation .line',
-        scaleY: 0,
-        opacity: 0,
-        translateX: [0, 0],
-        duration: 10
+    anime.timeline({
+        loopComplete: () => {
+            onLoopComplete();
+        }
     })
-    .add({
-        targets: '.title-animation',
-        opacity: 1,
-        duration: 10
-    })
-    .add({
-        targets: '.title-animation .line',
-        scaleY: [0, 1],
-        opacity: [0.5, 1],
-        easing: "easeOutExpo",
-        duration: 350
-    })
-    .add({
-        targets: '.title-animation .line',
-        translateX: translateValue,
-        easing: "easeOutExpo",
-        duration: 350,
-        delay: 100
-    })
-    .add({
-        targets: '.title-animation .letter',
-        opacity: [0, 1],
-        easing: "easeOutExpo",
-        duration: 400,
-        delay: (el, i) => 34 * (i + 1)
-    }, '-=380')
-    .add({
-        targets: '.title-animation .line',
-        scaleY: [1, 0],
-        opacity: [1, 0],
-        easing: "easeOutExpo",
-        duration: 1000
-    })
-    .add({
-        targets: '.title-animation',
-        opacity: 0,
-        duration: 500,
-        easing: "easeOutExpo",
-        delay: 1000,
-    });
+        .add({
+            targets: '.title-animation .line',
+            scaleY: 0,
+            opacity: 0,
+            translateX: [0, 0],
+            duration: 10
+        })
+        .add({
+            targets: '.title-animation',
+            opacity: 1,
+            duration: 10
+        })
+        .add({
+            targets: '.title-animation .line',
+            scaleY: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeOutExpo",
+            duration: 350
+        })
+        .add({
+            targets: '.title-animation .line',
+            translateX: translateValue,
+            easing: "easeOutExpo",
+            duration: 350,
+            delay: 100
+        })
+        .add({
+            targets: '.title-animation .letter',
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 400,
+            delay: (el, i) => 34 * (i + 1)
+        }, '-=380')
+        .add({
+            targets: '.title-animation .line',
+            scaleY: [1, 0],
+            opacity: [1, 0],
+            easing: "easeOutExpo",
+            duration: 1000
+        })
+        .add({
+            targets: '.title-animation',
+            opacity: 0,
+            duration: 500,
+            easing: "easeOutExpo",
+            delay: 1000,
+        });
 }
 animate();
 
@@ -113,16 +115,16 @@ const appearOptions = {
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOnScroll = new IntersectionObserver(
-    function(entries, appearOnScroll) {
-    entries.forEach(element => {
-        if (!element.isIntersecting) {
-            return;
-        } else {
-            element.target.classList.add('appear');
-            appearOnScroll.unobserve(element.target);
-        }
-    });
-}, appearOptions)
+    function (entries, appearOnScroll) {
+        entries.forEach(element => {
+            if (!element.isIntersecting) {
+                return;
+            } else {
+                element.target.classList.add('appear');
+                appearOnScroll.unobserve(element.target);
+            }
+        });
+    }, appearOptions)
 
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
@@ -133,19 +135,19 @@ faders.forEach(fader => {
 // #################################################
 
 const skillsButtons = [
-    { id: 'overall', element: document.getElementById('skill-button-overall')},
-    { id: 'gamedev', element: document.getElementById('skill-button-gamedev')},
-    { id: 'front', element: document.getElementById('skill-button-front')},
-    { id: 'back', element: document.getElementById('skill-button-back')},
-    { id: 'data', element: document.getElementById('skill-button-data')},
+    { id: 'overall', element: document.getElementById('skill-button-overall') },
+    { id: 'gamedev', element: document.getElementById('skill-button-gamedev') },
+    { id: 'front', element: document.getElementById('skill-button-front') },
+    { id: 'back', element: document.getElementById('skill-button-back') },
+    { id: 'data', element: document.getElementById('skill-button-data') },
 ]
 
 const skillsTables = [
-    { id: 'overall', element: document.getElementById('skills-overall')},
-    { id: 'gamedev', element: document.getElementById('skills-gamedev')},
-    { id: 'front', element: document.getElementById('skills-front')},
-    { id: 'back', element: document.getElementById('skills-back')},
-    { id: 'data', element: document.getElementById('skills-data')},
+    { id: 'overall', element: document.getElementById('skills-overall') },
+    { id: 'gamedev', element: document.getElementById('skills-gamedev') },
+    { id: 'front', element: document.getElementById('skills-front') },
+    { id: 'back', element: document.getElementById('skills-back') },
+    { id: 'data', element: document.getElementById('skills-data') },
 ]
 
 function setSkills(id) {
@@ -170,3 +172,25 @@ skillsButtons.forEach(button => {
         setSkills(button.id);
     });
 });
+
+
+// #################################################
+//                 Projects
+// #################################################
+const scrollController = new ScrollMagic.Controller();
+const scrollTl = new TimelineMax();
+
+const innerContainer = document.getElementById('projects-inner-container');
+
+// scrollTl.from(innerContainer, 1, {opacity: 0});
+scrollTl.fromTo(innerContainer, 5, { ease: Power0.easeNone, x: 200}, { ease: Power0.easeNone, x: -innerContainer.offsetWidth * 2.45})
+
+const scrollScene = new ScrollMagic.Scene({
+    triggerElement: '#projects',
+    triggerHook: 'onLeave',
+    duration: '200%',
+})
+.setPin('#projects')
+.setTween(scrollTl)
+.addTo(scrollController);
+

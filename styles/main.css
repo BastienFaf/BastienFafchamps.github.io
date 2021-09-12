@@ -55,6 +55,17 @@ h2.sub-title {
     font-weight: bolder;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text-highlight);
+    transition: 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--text-highlight-b);
+    cursor: pointer;
+}
+
 p {
     font-size: medium;
     font-weight: lighter;
@@ -169,8 +180,17 @@ svg {
     color: var(--text-highlight);
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+.pt-2 {
+    padding-top: 2rem;  
+}
 .pt-5 {
     padding-top: 5rem;  
+}
+.pt-8 {
+    padding-top: 8rem;  
 }
 
 .columns p {
@@ -254,4 +274,32 @@ canvas {
     outline: none;
     z-index: 1000;
     pointer-events: none;
+}
+
+.projects-container {
+    position: relative;
+    overflow: scroll;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projects-inner-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: unset;
+    flex-direction: row;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.project {
+    flex-shrink: 0;
+    position: relative;
+    background: white;
+    margin: 1rem;
+    margin-right: 3rem;
+    width: 60rem;
+    height: 30rem;
 }

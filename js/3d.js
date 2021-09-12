@@ -59,7 +59,7 @@ scene.add(torus_b);
 const geometry_c = new THREE.SphereGeometry( 2, 64, 32);
 const material_c = new THREE.PointsMaterial({ color: 0xffffff, size: 0.01 });
 const sphere = new THREE.Points(geometry_c, material_c);
-sphere.position.x = -6;
+sphere.position.x = -5.8;
 sphere.position.y = -5;
 sphere.rotation.z = 45;
 scene.add(sphere);
@@ -93,6 +93,20 @@ const tick = () => {
 tick();
 
 
+let stopValue = [1540, 3120];
+
 window.addEventListener("scroll", (ev) => {
-    camera.position.y = 0 - (window.scrollY / scrollFactor);
+    console.log(window.scrollY);
+    if (window.scrollY < stopValue[0])
+    {
+        camera.position.y = 0 - (window.scrollY / scrollFactor);
+    }
+    else if (window.scrollY >= stopValue[0] && window.scrollY <= stopValue[1])
+    {
+        camera.position.y = 0 - (stopValue[0] / scrollFactor);
+    }
+    else if (window.scrollY > stopValue[1])
+    {
+        camera.position.y = 0 - ((window.scrollY - 1580) / scrollFactor);
+    }
 });
