@@ -32,7 +32,7 @@ body {
 
 section.page-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     border-bottom: 1px var(--text-light) solid;
 }
 
@@ -228,6 +228,25 @@ svg {
 .title-animation .letter {
     display: inline-block;
     line-height: 1em;
+}
+
+.letters {
+    font-size: 0.1rem;
+}
+@media (max-width: 600px) {
+    .text-wrapper {
+        height: 4rem;
+    }
+    .letters {
+        position: relative;
+        top: 0;
+    }
+    .letter {
+        font-size: 5rem;
+    }
+    h2.sub-title {
+        font-size: 5rem;
+    }
 }
 
 .fade-in {

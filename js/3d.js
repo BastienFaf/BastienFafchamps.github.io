@@ -40,7 +40,7 @@ window.addEventListener('resize', () => {
 
 const textureLoader = new THREE.TextureLoader();
 
-const geometry = new THREE.TorusGeometry( 2.3, 0.4, 16, 100);
+const geometry = new THREE.TorusGeometry( 2.3, 0.4, 16, 50);
 const material = new THREE.PointsMaterial({ color: 0xffffff, size: 0.01 });
 const torus = new THREE.Points(geometry, material);
 torus.position.x = 3;
@@ -48,7 +48,7 @@ torus.position.y = 0.2;
 torus.rotation.x = 90;
 scene.add(torus);
 
-const geometry_b = new THREE.TorusGeometry( 1.5, 0.3, 16, 100);
+const geometry_b = new THREE.TorusGeometry( 1.5, 0.3, 16, 50);
 const material_b = new THREE.PointsMaterial({ color: 0xffffff, size: 0.01 });
 const torus_b = new THREE.Points(geometry_b, material_b);
 torus_b.position.x = 3;
@@ -56,7 +56,7 @@ torus_b.position.y = 0.2;
 torus_b.rotation.x = 90;
 scene.add(torus_b);
 
-const geometry_c = new THREE.SphereGeometry( 2, 64, 32);
+const geometry_c = new THREE.SphereGeometry( 2, 48, 16);
 const material_c = new THREE.PointsMaterial({ color: 0xffffff, size: 0.01 });
 const sphere = new THREE.Points(geometry_c, material_c);
 sphere.position.x = -5.8;
