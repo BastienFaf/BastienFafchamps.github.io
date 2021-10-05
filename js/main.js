@@ -260,7 +260,8 @@ function addProjectsListeners(projects) {
     projectsCards.forEach((element, i) => {
         element.addEventListener('click', () => {
             setProjectArticle(i);
-            history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title, projects[i].title.replace(/\s/g, ''));
+            // history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title, projects[i].title.replace(/\s/g, ''));
+            history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title);
             history.go(1);
         })
     });
@@ -283,19 +284,25 @@ function displayArticle(value) {
 
 (function addNavLinkListeners() {
     navLinks.forEach(element => {
-        element.addEventListener('click', () => {
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
             if (article.style.display != 'none') {
                 displayArticle(false);
-                history.back();
+                history.pushState({ }, "Index", "");
+                history.go(1);
             }
+            var hash = element.href.substring(element.href.indexOf("#")+1);
+            document.getElementById(hash).scrollIntoView();
         })
     });
 })();
 
 window.onpopstate = ev => {
     if (history.state != null && history.state.projectIndex != null) {
-        setProjectArticle(i);
+        setProjectArticle(history.state.projectIndex);
     } else {
         displayArticle(false);
+        history.replaceState({ }, "Index", "");
     }
 };
+history.replaceState({ }, "Index", '');

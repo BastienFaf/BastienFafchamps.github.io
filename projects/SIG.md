@@ -4,7 +4,7 @@
 <!-- <div class="technologies"><span>Unity</span><span>C#</span><div> -->
 
 #### Clicker Game On Steroids
-I like incremental/clicker games, what I don't like are meaningless clicker games. See It Grow aims to fix that, by giving the player crafts and quests that will make.
+See It Grow is an incremental game I am currently working on. It's a clicker crafting game but I'm aiming to make one with way more depth than a usual cookie clicker like. How ? By adding story, quests maybe building and exploration and things that do not really help with overscoping / scope creep.
 
 <img src="./media/SIG/wheatBucket.jpg" height="300px">
 <img src="./media/SIG/notEnoughItems.jpg" height="300px">
