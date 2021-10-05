@@ -105,9 +105,8 @@ animate = () => {
 animate();
 
 // #################################################
-//                 Fade In
+//                Scroll Fade In
 // #################################################
-
 const appearOptions = {
     threshold: 1
 };
@@ -133,7 +132,6 @@ faders.forEach(fader => {
 // #################################################
 //                 Skills
 // #################################################
-
 const skillsButtons = [
     { id: 'overall', element: document.getElementById('skill-button-overall') },
     { id: 'gamedev', element: document.getElementById('skill-button-gamedev') },
@@ -183,14 +181,121 @@ const scrollTl = new TimelineMax();
 const innerContainer = document.getElementById('projects-inner-container');
 
 // scrollTl.from(innerContainer, 1, {opacity: 0});
-scrollTl.fromTo(innerContainer, 5, { ease: Power0.easeNone, x: 300}, { ease: Power0.easeNone, x: -innerContainer.offsetWidth * 2.45})
+scrollTl.fromTo(innerContainer, 5, { ease: Power0.easeNone, x: 300 }, { ease: Power0.easeNone, x: -innerContainer.offsetWidth * 2.45 })
 
 const scrollScene = new ScrollMagic.Scene({
     triggerElement: '#projects-container',
     triggerHook: 'onLeave',
     duration: '200%',
 })
-.setPin('#projects-container')
-.setTween(scrollTl)
-.addTo(scrollController);
+    .setPin('#projects-container')
+    .setTween(scrollTl)
+    .addTo(scrollController);
 
+
+// Articles
+const article = document.getElementById('project-article-container');
+var projects = [];
+var projectsCards = [];
+const projectsContainer = document.getElementById('projects-inner-container');
+const projectTemplate = document.getElementById('project-card-template');
+const navLinks = document.querySelectorAll('.nav-a');
+
+const homeSection = document.getElementById('home');
+const skillsSection = document.getElementById('skills');
+const projectsSection = document.getElementById('projects');
+const contactSection = document.getElementById('contact');
+const backgroundCanvas = document.getElementById('front-canvas');
+
+(async function getProjects() {
+    const response = await fetch('./projects/projects.json');
+    response.json()
+        .then(data => {
+            data.forEach(project => {
+                getProjectCard(project);
+            });
+            projectsCards = document.querySelectorAll('.project');
+            projects = data;
+            addProjectsListeners(data);
+        });
+})();
+
+async function setMarkDown(markDownFilePath) {
+    const response = await fetch(markDownFilePath);
+    response.text()
+        .then(text => {
+            article.innerHTML = markdown(text);
+        });
+}
+
+function getProjectCard(project) {
+    let clone = document.importNode(projectTemplate.content, true);
+
+    clone.querySelector('h3').innerHTML = project.title;
+    clone.querySelector('p').innerHTML = project.description;
+
+    let imgs = clone.querySelector('.img-container');
+    if (project.imgs != null) {
+        project.imgs.forEach(src => {
+            let img = document.createElement('img');
+            img.src = src;
+            imgs.appendChild(img);
+        })
+    }
+
+    let technologies = clone.querySelector('.technologies');
+    project.technologies.forEach(t => {
+        let span = document.createElement('span');
+        span.innerHTML = t;
+        technologies.appendChild(span);
+    })
+
+    projectsContainer.appendChild(clone);
+
+    if (projectsContainer.lastChild.style != null)
+        projectsContainer.lastChild.style.width = project.cardWidth;
+}
+
+function addProjectsListeners(projects) {
+    projectsCards.forEach((element, i) => {
+        element.addEventListener('click', () => {
+            setProjectArticle(i);
+            history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title);
+            history.go(1);
+        })
+    });
+}
+
+function setProjectArticle(projectIndex) {
+    setMarkDown(projects[projectIndex].article);
+    window.scrollTo(0, 0);
+    displayArticle(true);
+}
+
+function displayArticle(value) {
+    article.style.display = value ? 'inline-block' : 'none';
+    homeSection.style.display = value ? 'none' : 'block';
+    skillsSection.style.display = value ? 'none' : 'block';
+    projectsSection.style.display = value ? 'none' : 'block';
+    contactSection.style.display = value ? 'none' : 'block';
+    backgroundCanvas.style.display = value ? 'none' : 'inline-block';
+}
+
+(function addNavLinkListeners() {
+    navLinks.forEach(element => {
+        element.addEventListener('click', () => {
+            if (article.style.display != 'none') {
+                displayArticle(false);
+                history.back();
+            }
+        })
+    });
+})();
+
+window.onpopstate = ev => {
+    if (history.state != null && history.state.projectIndex != null) {
+        setProjectArticle(i);
+    } else {
+        displayArticle(false);
+    }
+};
