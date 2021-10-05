@@ -260,7 +260,7 @@ function addProjectsListeners(projects) {
     projectsCards.forEach((element, i) => {
         element.addEventListener('click', () => {
             setProjectArticle(i);
-            history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title);
+            history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title, projects[i].title.replace(/\s/g, ''));
             history.go(1);
         })
     });
