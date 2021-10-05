@@ -303,6 +303,7 @@ window.onpopstate = ev => {
     } else {
         displayArticle(false);
         history.replaceState({ }, "Index", "");
+        document.getElementById('projects').scrollIntoView();
     }
 };
 history.replaceState({ }, "Index", '');

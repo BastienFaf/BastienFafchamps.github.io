@@ -6,4 +6,4 @@ Unity, C#
 
 #### Plateformer with a tint of puzzle
 This game is a plateformer made all by myself in a week, it ranked first in game design and fun, making it the overall winner for  the 2018 Community Game Jam. <br />
-[Itch.io Page](https://basyk-games.itch.io/back-and-white-cgj)
+[Itch.io Project Page](https://basyk-games.itch.io/back-and-white-cgj)
