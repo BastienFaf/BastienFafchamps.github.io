@@ -204,6 +204,7 @@ const navLinks = document.querySelectorAll('.nav-a');
 const homeSection = document.getElementById('home');
 const skillsSection = document.getElementById('skills');
 const projectsSection = document.getElementById('projects');
+const aboutSection = document.getElementById('about');
 const contactSection = document.getElementById('contact');
 const backgroundCanvas = document.getElementById('front-canvas');
 
@@ -279,7 +280,12 @@ function displayArticle(value) {
     skillsSection.style.display = value ? 'none' : 'block';
     projectsSection.style.display = value ? 'none' : 'block';
     contactSection.style.display = value ? 'none' : 'block';
+    aboutSection.style.display = value ? 'none' : 'block';
     backgroundCanvas.style.display = value ? 'none' : 'inline-block';
+
+    if (value == false) {
+        article.innerHTML = '';
+    }
 }
 
 (function addNavLinkListeners() {

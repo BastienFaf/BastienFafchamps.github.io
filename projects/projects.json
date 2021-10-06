@@ -1,7 +1,7 @@
 [
     {
         "title": "See It Grow",
-        "description": "A Unity crafting \"clicker\" game I'm currently working on. Featuring dynamically loaded content.",
+        "description": "A Unity crafting clicker game I'm currently working on. Featuring dynamically loaded content.",
         "imgs": [
             "./media/SIG/wheatBucket.jpg",
             "./media/SIG/anvilCraft.jpg",
@@ -40,6 +40,20 @@
             "React",
             "Python",
             "Flask"
+        ]
+    },
+    {
+        "title": "Entropogun",
+        "description": "Small 3D top down shoot them all made in Unity in a week-end.",
+        "imgs": [
+            "./media/Entropogun/thumbnail.png"
+        ],
+        "article": "./projects/Entropogun.md",
+        "cardWidth": "auto",
+        "technologies": [
+            "Unity",
+            "C#",
+            "Abelton"
         ]
     }
 ]
