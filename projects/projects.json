@@ -1,7 +1,7 @@
 [
     {
         "title": "See It Grow",
-        "description": "A Unity crafting clicker game I'm currently working on. Featuring dynamically loaded content.",
+        "description": "My biggest project to date, a Unity crafting clicker game I'm currently working on. Featuring dynamically loaded content.",
         "imgs": [
             "./media/SIG/wheatBucket.jpg",
             "./media/SIG/anvilCraft.jpg",
@@ -18,7 +18,7 @@
     },
     {
         "title": "Back and White",
-        "description": "Made solo in a week, this game ranked first in game design and fun making it the overall winner for the 2018 Community Game Jam (First over a 1009 entries, still can't believe it to this day 🤯)",
+        "description": "Made solo in a week, this game ranked first in game design and fun making it the overall winner of the 2018 Community Game Jam (First over 1009 entries, still can't believe it to this day 🤯).",
         "imgs": [
             "./media/BaW/baw_1.jpg"
         ],

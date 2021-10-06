@@ -3,6 +3,7 @@
     --bg-b: #000000;
     --bg-c: #303030;
     --text: #ececec;
+    --text-b: #ffffff;
     --text-subtitle: #dadada;
     --text-light: #424242;
     --text-highlight: #ffab2d;  
@@ -64,20 +65,19 @@ a {
     color: var(--text-highlight);
     transition: 0.2s ease-in-out;
 }
-
 a:hover {
     color: var(--text-highlight);
     cursor: pointer;
 }
-
 a:hover:not(.no-glow) {
     text-shadow: 0 0 5px var(--text-highlight);
 }
 
 
 p {
+    font-family: 'Quicksand';
     font-size: medium;
-    font-weight: lighter;
+    /* font-weight: 10; */
 }
 p.sub-title {
     color: var(--text-subtitle);
@@ -87,7 +87,9 @@ p.sub-title {
 }
 
 strong, b {
-    color: var(--text);
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 1000;
+    color: var(--text-b);
     /* text-shadow: 0 0 2px var(--text); */
 }
 
@@ -204,6 +206,9 @@ svg {
 }
 .pt-8 {
     padding-top: 8rem;  
+}
+.mb-xl {
+    margin-bottom: 20rem;  
 }
 
 .columns p {
@@ -384,9 +389,8 @@ canvas {
     font-weight: bold;
 }
 .project p {
-    font-size: smaller;
     text-align: start;
-    height: 3rem;
+    height: 5.5rem;
 }
 .project img {
     position: relative;
