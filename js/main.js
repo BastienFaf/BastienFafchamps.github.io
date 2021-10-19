@@ -181,7 +181,7 @@ const scrollTl = new TimelineMax();
 const innerContainer = document.getElementById('projects-inner-container');
 
 // scrollTl.from(innerContainer, 1, {opacity: 0});
-scrollTl.fromTo(innerContainer, 5, { ease: Power0.easeNone, x: 300 }, { ease: Power0.easeNone, x: -innerContainer.offsetWidth * 2.45 })
+scrollTl.fromTo(innerContainer, 5, { ease: Power0.easeNone, x: 300 }, { ease: Power0.easeNone, x: -innerContainer.offsetWidth * 3 })
 
 const scrollScene = new ScrollMagic.Scene({
     triggerElement: '#projects-container',
