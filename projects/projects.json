@@ -43,6 +43,20 @@
         ]
     },
     {
+        "title": "Town's King",
+        "description": "A web turn based game made using Firebase.",
+        "imgs": [
+            "./media/TownsKing/thumbnail.png"
+        ],
+        "article": "./projects/TownsKing.md",
+        "cardWidth": "auto",
+        "technologies": [
+            "Firebase",
+            "Js",
+            "Html"
+        ]
+    },
+    {
         "title": "Entropogun",
         "description": "Small 3D top down shoot them all made in Unity in a week-end.",
         "imgs": [
