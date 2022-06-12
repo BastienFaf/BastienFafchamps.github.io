@@ -175,29 +175,28 @@ skillsButtons.forEach(button => {
 // #################################################
 //                 Projects
 // #################################################
-const scrollController = new ScrollMagic.Controller();
-const scrollTl = new TimelineMax();
-
-const innerContainer = document.getElementById('projects-inner-container');
+// const scrollController = new ScrollMagic.Controller();
+// const scrollTl = new TimelineMax();
+// const innerContainer = document.getElementById('projects-inner-container');
 
 // scrollTl.from(innerContainer, 1, {opacity: 0});
-scrollTl.fromTo(innerContainer, 5, { ease: Power0.easeNone, x: 300 }, { ease: Power0.easeNone, x: -innerContainer.offsetWidth * 3 })
+// scrollTl.fromTo(innerContainer, 5, { ease: Power0.easeNone, x: 300 }, { ease: Power0.easeNone, x: -innerContainer.offsetWidth * 3 })
 
-const scrollScene = new ScrollMagic.Scene({
-    triggerElement: '#projects-container',
-    triggerHook: 'onLeave',
-    duration: '200%',
-})
-    .setPin('#projects-container')
-    .setTween(scrollTl)
-    .addTo(scrollController);
+// const scrollScene = new ScrollMagic.Scene({
+//     triggerElement: '#projects-container',
+//     triggerHook: 'onLeave',
+//     duration: '200%',
+// })
+//     .setPin('#projects-container')
+//     .setTween(scrollTl)
+//     .addTo(scrollController);
 
 
 // Articles
 const article = document.getElementById('project-article-container');
 var projects = [];
 var projectsCards = [];
-const projectsContainer = document.getElementById('projects-inner-container');
+const projectsContainer = document.getElementById('projects-container');
 const projectTemplate = document.getElementById('project-card-template');
 const navLinks = document.querySelectorAll('.nav-a');
 
@@ -261,7 +260,6 @@ function addProjectsListeners(projects) {
     projectsCards.forEach((element, i) => {
         element.addEventListener('click', () => {
             setProjectArticle(i);
-            // history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title, projects[i].title.replace(/\s/g, ''));
             history.pushState({ project: projects[i].title, projectIndex: i }, projects[i].title);
             history.go(1);
         })

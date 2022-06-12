@@ -68,35 +68,73 @@
 
                 <div class="skills-buttons">
                     <button id="skill-button-overall" class="button skill-button selected">Overall</button>
-                    <button id="skill-button-gamedev" class="button skill-button">Game Developpement</button>
                     <button id="skill-button-front" class="button skill-button">Front-End</button>
                     <button id="skill-button-back" class="button skill-button">Server</button>
                     <button id="skill-button-data" class="button skill-button">Database</button>
+                    <button id="skill-button-gamedev" class="button skill-button">Game Developpement</button>
                 </div>
 
                 <div class="skills-tables-container">
-                    <!-- <hr class="vertical-separator"> -->
                     <div id="skills-overall" class="skills-table selected">
                         <div class="row">
                             <div class="six columns">
                                 <h3>Languages</h3>
+                                <p>C#</p>
+                                <p>JavaScript</p>
+                                <p>Java</p>
+                                <p>Python</p>
+                                <p><i>UML</i></p>
                             </div>
                             <div class="six columns">
                                 <h3>Tools</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="six columns">
-                                <p>C#</p>
-                                <p>Java</p>
-                                <p>Python</p>
-                            </div>
-                            <div class="six columns">
                                 <p>Visual Studio Code</p>
                                 <p>Git</p>
                                 <p>InteliJ</p>
-                                <p>Eclipse</p>
                                 <p>Microsoft Visual Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="skills-front" class="skills-table">
+                        <div class="row">
+                            <div class="six columns">
+                                <h3>Languages</h3>
+                                <p>JS</p>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <div class="six columns">
+                                <h3>Frameworks</h3>
+                                <p>React</p>
+                                <p>Svelte</p>
+                                <p>Vue</p> 
+                                <p>Vanilla JS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="skills-back" class="skills-table">
+                        <div class="row">
+                            <div class="six columns">
+                                <h3>Languages</h3>
+                                <p>Python</p>
+                                <p>C#</p>
+                            </div>
+                            <div class="six columns">
+                                <h3>Frameworks</h3>
+                                <p>ASP.NET Core</p>
+                                <p>Flask</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="skills-data" class="skills-table">
+                        <div class="row">
+                            <div class="six columns">
+                                <h3>Languages</h3>
+                                <p>SQL</p>
+                                <p>NoSQL</p>
+                            </div>
+                            <div class="six columns">
+                                <h3>Services</h3>
+                                <p>Firebase</p>
                             </div>
                         </div>
                     </div>
@@ -112,67 +150,6 @@
                                 <p>Music & Sound Design - Ableton</p>
                                 <p>3D Modeling - Blender</p>
                                 <p>Pixelart - Aseprite</p>
-                                <p>Image Editing - Photoshop</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="skills-front" class="skills-table">
-                        <div class="row">
-                            <div class="six columns">
-                                <h3>Langages</h3>
-                            </div>
-                            <div class="six columns">
-                                <h3>Frameworks</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="six columns">
-                                <p>HTML</p>
-                                <p>CSS</p>
-                                <p>JS</p>
-                            </div>
-                            <div class="six columns">
-                                <p>Vanilla JS</p>
-                                <p>React</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="skills-back" class="skills-table">
-                        <div class="row">
-                            <div class="six columns">
-                                <h3>Langages</h3>
-                            </div>
-                            <div class="six columns">
-                                <h3>Frameworks</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="six columns">
-                                <p>Python</p>
-                                <p>C#</p>
-                            </div>
-                            <div class="six columns">
-                                <p>Flask</p>
-                                <p>ASP.NET Core</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="skills-data" class="skills-table">
-                        <div class="row">
-                            <div class="six columns">
-                                <h3>Langages</h3>
-                            </div>
-                            <div class="six columns">
-                                <h3>Services</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="six columns">
-                                <p>SQL</p>
-                                <p>NoSQL</p>
-                            </div>
-                            <div class="six columns">
-                                <p>Firebase</p>
                             </div>
                         </div>
                     </div>
@@ -192,8 +169,6 @@
                 </div>
 
                 <div id="projects-container" class="projects-container pt-5">
-                    <div id="projects-inner-container" class="projects-inner-container">
-                    </div>
                 </div>
             </section>
 
@@ -204,12 +179,12 @@
                 <div class="mb-xl">
                     <h3>Technical Me:</h3>
                     <p class="mb-0">I'm a 21 years old <b>IT student</b> currently studying software designing.</p>
-                    <p>I'm curious and passionate about programming, would that be making a game in Unity, a full-stack web application, or a random project in python. I'm mostly a <b>game developer</b>, I've been using Unity for more than 4 years now but I've also done games in HTML and JavaScript, Pygame and even Blender (Yep, the 3D modeling program).</p>
-                    <p>At school I've learned how to better structurize my code, I've started to make more and more applications, front to back. We've worked in AGILE methods and learned all kinds of UML diagrams.</p>
+                    <p>I'm curious and passionate about programming, would that be making a game in Unity, a <b>full-stack web application</b>, or a random project in python. I also consider myself a <b>game developer</b>, I've been using Unity for more than 4 years now but I've also done games in HTML and JavaScript, Pygame and even Blender (yep, the 3D modeling software).</p>
+                    <p>At school I've learned how to better structurize my code, I've started to make more and more applications, front and back. We've worked in AGILE methods and learned all kinds of UML diagrams.</p>
                     
                     <h3>Personal Me:</h3>
-                    <p>I'm a <b>creative</b> person, I've started countless projects (at the expense of finishing them, oops), and I've tackled many things, music, Pixelart, sound design, video editing, you name it...</p>
-                    <p>At first, I'm kinda <b>shy</b>, but when you get to know me I'll make sure to bring <b>happiness</b> to the room. <b>Helping and teaching</b> others has always been important to me, I like to make myself useful and I've never liked seeing people struggling.</p>
+                    <p>I'm a <b>creative</b> person, I've started countless projects (at the expense of finishing them, oops), and I've tackled many things, music, pixelart, sound design, video editing, you name it...</p>
+                    <p>At first, I'm kinda shy, but when you get to know me I'll make sure to bring <b>happiness</b> to the room. <b>Helping and teaching</b> others has always been important to me, I like to make myself useful and I've never liked seeing people struggling.</p>
                     
                     <br />
                     
@@ -228,7 +203,7 @@
                 </div>
                 <div>
                     <p class="mb-0">Interested in my skills or my work? Contact me here.</p>
-                    <p class="mb-0"><a href="files/resume_bastien_fafchamps.pdf" target="_blank">Download</a> my resume.</p>
+                    <p class="mb-0"><a href="files/resume_bastien_fafchamps_v2.pdf" target="_blank">Download</a> my resume.</p>
                     <p><a href="https://github.com/BastienFafchamps/BastienFafchamps.github.io" target="_blank">Source code</a> of this page.</p>
                 </div>
                 <div class="contact-buttons">

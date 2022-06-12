@@ -6,13 +6,14 @@
     --text-b: #ffffff;
     --text-subtitle: #dadada;
     --text-light: #424242;
-    --text-highlight: #ffab2d;  
+    --text-highlight: #ffab2d;
     --text-highlight-b: #db6618;
-    --text-highlight-t: #ffab2d60;  
+    --text-highlight-t: #ffab2d60;
     scroll-behavior: smooth;
 }
 
-body, html {
+body,
+html {
     background-color: var(--text);
 }
 
@@ -42,13 +43,16 @@ section.page-section {
 h1 {
     color: var(--text);
 }
+
 h1 span {
     font-size: 12rem;
 }
+
 h2 {
     font-size: 8rem;
     font-weight: bolder;
 }
+
 h2.sub-title {
     color: var(--text-highlight);
     background: -webkit-linear-gradient(var(--text-highlight), var(--text-highlight-b));
@@ -56,6 +60,7 @@ h2.sub-title {
     -webkit-text-fill-color: transparent;
     font-weight: bolder;
 }
+
 h4 {
     margin-top: 10rem;
 }
@@ -65,10 +70,12 @@ a {
     color: var(--text-highlight);
     transition: 0.2s ease-in-out;
 }
+
 a:hover {
     color: var(--text-highlight);
     cursor: pointer;
 }
+
 a:hover:not(.no-glow) {
     text-shadow: 0 0 5px var(--text-highlight);
 }
@@ -79,14 +86,17 @@ p {
     font-size: medium;
     /* font-weight: 10; */
 }
+
 p.sub-title {
     color: var(--text-subtitle);
 }
+
 .title {
     padding-top: 15rem;
 }
 
-strong, b {
+strong,
+b {
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 1000;
     color: var(--text-b);
@@ -102,11 +112,13 @@ nav {
     z-index: 100;
     width: 100%;
 }
+
 nav ul {
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
 }
+
 nav ul li {
     background: none;
     padding: 0.5rem;
@@ -115,12 +127,14 @@ nav ul li {
     margin: .2rem;
     z-index: 100;
 }
+
 nav ul li a {
     text-decoration: none;
     color: var(--text-subtitle);
     font-weight: lighter;
     transition: color .2s ease-in-out;
 }
+
 nav ul li a:hover {
     color: var(--text);
 }
@@ -135,12 +149,14 @@ svg {
     fill: var(--text);
     transition: fill 0.2s ease-in-out;
 }
+
 .svg-button {
     width: max-content;
 }
+
 .svg-button:hover svg {
     fill: var(--text-highlight);
-    filter: drop-shadow( 0px 0px 5px var(--text-highlight));
+    filter: drop-shadow(0px 0px 5px var(--text-highlight));
 }
 
 .next-page-button {
@@ -150,10 +166,12 @@ svg {
     bottom: 10rem;
     animation: MoveUpDown 3s ease-in-out infinite alternate;
 }
+
 @keyframes MoveUpDown {
     from {
         transform: translateY(-5px);
     }
+
     to {
         transform: translateY(5px);
     }
@@ -162,6 +180,7 @@ svg {
 .skills-tables-container {
     position: relative;
 }
+
 .vertical-separator {
     position: absolute;
     left: 45%;
@@ -189,26 +208,32 @@ svg {
     transition: fill 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
 }
-.icon-button:hover, .icon-button:hover svg {
+
+.icon-button:hover,
+.icon-button:hover svg {
     fill: var(--text-highlight);
     color: var(--text-highlight);
-    filter: drop-shadow( 0px 0px 5px var(--text-highlight-t));
+    filter: drop-shadow(0px 0px 5px var(--text-highlight-t));
 }
 
 .mb-0 {
     margin-bottom: 0;
 }
+
 .pt-2 {
-    padding-top: 2rem;  
+    padding-top: 2rem;
 }
+
 .pt-5 {
-    padding-top: 5rem;  
+    padding-top: 5rem;
 }
+
 .pt-8 {
-    padding-top: 8rem;  
+    padding-top: 8rem;
 }
+
 .mb-xl {
-    margin-bottom: 20rem;  
+    margin-bottom: 20rem;
 }
 
 .columns p {
@@ -238,8 +263,8 @@ svg {
     transform-origin: 0 50%;
 }
 
-.title-animation .line1 { 
-    top: 0; 
+.title-animation .line1 {
+    top: 0;
     left: 0;
 }
 
@@ -256,21 +281,26 @@ svg {
     h1.title-animation {
         height: 6rem;
     }
+
     .text-wrapper {
         position: relative;
         height: 6rem;
     }
+
     .letters {
         position: relative;
         top: -5rem;
     }
+
     .letter {
         font-size: 10rem;
     }
+
     h2.sub-title {
         margin-top: 5rem;
         font-size: 5rem;
     }
+
     .next-page-button {
         display: none;
     }
@@ -280,12 +310,15 @@ svg {
     .letter {
         font-size: 8rem;
     }
+
     h2.sub-title {
         font-size: 5rem;
     }
+
     .next-page-button {
         display: none;
     }
+
     .skill-button {
         width: 100%;
     }
@@ -297,6 +330,7 @@ svg {
     right: 30px;
     transition: 1s ease-in-out;
 }
+
 .fade-in.appear {
     opacity: 1;
     right: 0px;
@@ -307,15 +341,18 @@ svg {
     padding-top: 5rem;
     padding-bottom: 2rem;
 }
+
 .skill-button {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid var(--text-light);
     transition: 0.2s ease-in-out;
 }
+
 .skill-button:hover {
     color: var(--text);
 }
+
 .skill-button.selected {
     color: var(--text-highlight);
     border-bottom: 1px solid var(--text-highlight);
@@ -324,6 +361,7 @@ svg {
 .skills-table {
     display: none;
 }
+
 .skills-table.selected {
     display: block;
 }
@@ -339,69 +377,68 @@ canvas {
 
 .projects-container {
     position: relative;
-    overflow: scroll;
-    width: 100%;
-    height: fit-content;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.projects-inner-container {
-    position: relative;
     width: 100%;
     height: fit-content;
     display: flex;
-    flex-wrap: unset;
-    flex-direction: row;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    flex-direction: column;
+    align-items: center;
 }
-
-.projects-inner-container::-webkit-scrollbar,
-.projects-container::-webkit-scrollbar {
-    display: none;
-  }
 
 .project {
     flex-shrink: 0;
     position: relative;
+    display: inline-block;
     background: none;
     color: var(--text);
     text-decoration: none;
     overflow: hidden;
-    width: 60rem;
+    width: 60%;
     height: fit-content;
 
     margin: 1rem;
     margin-right: 3rem;
     padding: 3rem;
 
-    border-bottom: 1px solid var(--text-light);
-    opacity: 0.8;
+    margin-right: 30%;
+    margin-left: 0%;
+
+    /* border-bottom: 1px solid var(--text-light); */
     /* border-top: 1px solid var(--text-light); */
-    /* box-shadow: 2px 2px 10px rgb(14, 14, 14); */
+
+    opacity: 0.8;
 }
-.project:hover{
+
+.project:nth-child(even) {
+    margin-right: 0%;
+    margin-left: 30%;
+}
+
+.project:hover {
     opacity: 1;
     color: var(--text);
 }
+
 .project h3 {
     font-weight: bold;
 }
+
 .project p {
     text-align: start;
     height: 5.5rem;
 }
+
 .project img {
     position: relative;
     /* width: 100%; */
     height: 300px;
     object-fit: cover;
 }
+
 div .technologies {
     display: flex;
     flex-direction: row;
 }
+
 .technologies span {
     font-size: smaller;
     background-color: var(--bg-c);
@@ -420,6 +457,7 @@ div .technologies {
     min-height: 100vh;
 }
 
-img, video {
+img,
+video {
     max-width: 100%;
 }

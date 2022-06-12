@@ -1,5 +1,29 @@
 [
     {
+        "title": "Tiny Engine",
+        "description": "A vanilla JS game engine without any external library and compiled to a single html file. It features a code editor with syntax highlighting, a sprite editor, a synthesiser / instrument maker and a melody writer.",
+        "imgs": ["./media/JsGameEngine/double.png"],
+        "article": "./projects/JsGameEngine.md",
+        "cardWidth": "auto",
+        "technologies": [
+            "JS",
+            "HTML"
+        ]
+    },
+    {
+        "title": "GRICOR",
+        "description": "This application was made for a real client but in school context. We applied <i>AGILE</i> concepts, with frequent client interactions, needs analysis and coding sprints.",
+        "imgs": ["./media/gricor_1.png"],
+        "article": "./projects/GRICOR.md",
+        "cardWidth": "auto",
+        "technologies": [
+            "Js",
+            "React",
+            "Python",
+            "Flask"
+        ]
+    },
+    {
         "title": "See It Grow",
         "description": "My biggest project to date, a Unity crafting clicker game I'm currently working on. Featuring dynamically loaded content.",
         "imgs": [
@@ -30,19 +54,6 @@
         ]
     },
     {
-        "title": "GRICOR",
-        "description": "This application was made for a real client but in school context. We applied <i>AGILE</i> concepts, with frequent client interactions, needs analysis and coding sprints.",
-        "imgs": ["./media/gricor_1.png"],
-        "article": "./projects/GRICOR.md",
-        "cardWidth": "auto",
-        "technologies": [
-            "Js",
-            "React",
-            "Python",
-            "Flask"
-        ]
-    },
-    {
         "title": "Town's King",
         "description": "A web turn based game made using Firebase.",
         "imgs": [
@@ -52,7 +63,7 @@
         "cardWidth": "auto",
         "technologies": [
             "Firebase",
-            "Js",
+            "JS",
             "Html"
         ]
     },

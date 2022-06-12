@@ -15,4 +15,5 @@ What makes this game unique is that you first play a level normally but once you
 
 <img src="./media/BaW/baw_3.jpg" height="200px">
 <img src="./media/BaW/baw_4.jpg" height="200px">
+
 [Itch.io Project Page](https://basyk-games.itch.io/back-and-white-cgj)
