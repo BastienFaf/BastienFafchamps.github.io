@@ -6,7 +6,7 @@
 This web application is a project I've made solo. It's a fully featured game making environement. With code writing, pixel art and sound editing. ([Source Code](https://github.com/BastienFafchamps/JsGameEngine))
 
 It is still work in progress but it's publicly availible, you can fiddle with it if you want. (Click the second button to (re)start a game)
-<iframe src="https://bastienfafchamps.github.io/JsGameEngine/" title="Tiny Engine"></iframe>
+<iframe class="project-iframe" src="https://bastienfafchamps.github.io/JsGameEngine/" title="Tiny Engine"></iframe>
 
 It can also "compile" to a single HTML file, no extra CSS, javascript or media files required. And without using any cdns or imports. Meaning it can be downloaded and used on a pc localy, without an internet connection.
 
